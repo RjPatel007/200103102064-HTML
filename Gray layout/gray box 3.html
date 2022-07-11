@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>Gray box</title>
+    <style>
+        #r1,#r3{
+            background-color: gray;
+            height: 40px;
+            padding-top: 20px;
+            padding-left: 10px;
+            margin-bottom: 10px;
+        }
+        #r2{
+            height: 500px;
+            width: 100%;
+            margin-bottom: 10px;
+
+        }
+        #r2c1{
+            float: left;
+            width: 18%;
+            height: 500px;
+            
+        }
+        #r2c2{
+            float: right;
+            width: 82%;
+            
+        }
+        #r2c2 #R1{
+            height: 80px;
+            background-color: gray;
+            padding-top: 40px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        #r2c2 #R2{
+            height: 230px;
+            background-color: gray;
+            padding-top: 140px;
+            text-align: center;
+        }
+        #r3{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="r1">Logo</div>
+    <div id="r2">
+        <div id="r2c1">Sidebar</div>
+        <div id="r2c2">
+            <div id="R1">Header</div>
+            <div id="R2">Body area</div>
+        </div>
+    </div>
+    <div id="r3">Footer</div>
+</body>
+</html>

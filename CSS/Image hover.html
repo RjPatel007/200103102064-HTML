@@ -1,0 +1,62 @@
+
+<html>
+	<head>
+		<style>
+			.image-1{
+			  position:relative;
+			  width: 300px;
+			}
+
+			.image {
+			  display: block;
+			  width: 400px;
+			  height: 400px;
+			  transition:1s;
+              
+			}
+
+			.overlay {
+			  position:absolute;
+			  top: 0;
+			  bottom: 0;
+			  left: 0;
+			  right: 0;
+			  height: 100%;
+			  opacity:0;
+			  transition: 1s;
+			  background-color:rgba(0,0,0,0.7);
+              width: 400px;
+			}
+
+			.image-1:hover .overlay {
+			  opacity:1;
+			}
+			.image-1:hover .image {
+			  
+			  transform:rotate(360deg);
+
+			 
+			}
+			.text {
+			  color: white;
+			  font-size: 20px;
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  -webkit-transform: translate(-50%, -50%);
+			  transform: translate(-50%, -50%);
+			  text-align: center;
+			  
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Image  Effect</h2>
+		<div class="image-1">
+			<img src="photo_2022-07-11_16-45-13.jpg" alt="Demo Image" class="image">
+			<div class="overlay">
+				<div class="text">Mr.Raj Patel</div>
+		    </div>
+		</div>
+	</body>
+</html>

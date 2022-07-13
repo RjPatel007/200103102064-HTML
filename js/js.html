@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+
+        
+        <script>
+            
+
+        function dalert(){
+            alert("Internal alert");
+        }
+			
+			function dconfirm(){
+                if(confirm("are you sure...?"))
+                {
+                    alert("Yesss");
+                }
+                else{
+                    alert("Noo");
+                }
+			
+            
+			}
+			function dprompt(){
+				var fName=prompt("Enter Firstname Here..");
+				var lName=prompt("Enter Lastname Here..");
+				alert(fName+" "+lName);
+            }
+
+            function bodyBgBrown(){
+                document.body.style.backgroundColor="Brown";
+            }
+
+            function divBgBlue(){
+                document.getElementById("Rj").style.backgroundColor="Blue"
+            }
+
+            function divBgDynamic(){
+				document.getElementById("Rj").style.backgroundColor=prompt("Enter color name here..");
+			}
+
+			function bodyBgDynamic(){
+				document.body.style.backgroundColor=prompt("Enter color name here..");
+			}
+
+            function bodyBGC1(){
+				document.body.style.backgroundColor=document.getElementById("C1").value;
+			}
+
+			function divBGC2(){
+				document.getElementById("Rj").style.backgroundColor=document.getElementById("C2").value;
+			}
+        </script>
+        <script src="scripts/demo.js" type="text/javascript"></script>
+            
+        <style>
+            #Rj{
+                background-color: yellow;
+                height: 150px;
+                width: 300px;
+                text-align: center;
+                padding-top:150px
+            }
+        </style>
+    </head>
+    <body>
+        <div id="Rj">hello </div><hr>
+        <input type="button" value="alert Inline" onclick="alert('Hello Guys')"/> &nbsp;
+        <input type="button" value="confirm Inline" onclick="confirm('are you sure?')"/> &nbsp;
+        <input type="button" value="prompt Inline" onclick="prompt('Enter first name here')"/> &nbsp;
+        <hr>
+
+        <input type="button" value="alert internal" onclick="dalert()"/> &nbsp;
+        <input type="button" value="confirm internal" onclick="dconfirm()"/> &nbsp;
+        <input type="button" value="prompt internal" onclick="dprompt()"/>&nbsp;
+        <hr>
+
+        <input type="button" value="alert External" onclick="dExternalalert()"/> &nbsp;
+        <input type="button" value="confirm External" onclick="dExternalconfirm()"/> &nbsp;
+        <input type="button" value="prompt External" onclick="dxternalEprompt()"/>&nbsp;
+        <hr>
+
+        <input type="button" value="Body Bg Brown" onclick="bodyBgBrown()"/> &nbsp;&nbsp;
+        <input type="button" value="Div Bg Blue" onclick="divBgBlue()"/>
+        <hr>
+        <input type="button" value="Body Bg prompt" onclick="bodyBgDynamic()"> &nbsp;&nbsp;
+        <input type="button" value="Div Bg prompt" onclick="divBgDynamic()"> &nbsp;&nbsp;
+        <hr>
+        <input type="color" id="C1" onchange="bodyBGC1()" />&nbsp;&nbsp;
+		<input type="color" id="C2" onchange="divBGC2()" />&nbsp;&nbsp;
+        </html>
+

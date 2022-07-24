@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
+<style> 
+#flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+ 
+  display: none;
+  padding-left: 400px;
+  height: 500px;
+  width: 500px;
+  
+}
+</style>
+</head>
+<body>
+ 
+<div id="flip">Click to see lion photo</div><br>
+<img src="download.jpg" id="panel"/>
+
+</body>
+</html>

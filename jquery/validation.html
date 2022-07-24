@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+        var $FNameLNameRegEx = /^([a-zA-Z]{2,20})$/;
+        var $FullNameRegEx = /^([a-zA-Z ]{2,40})$/;
+        var $EmailIdRegEx = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,8}\b$/i;
+        var $ConNoRegEx = /^([0-9]{10})$/;
+
+        $(document).ready(function () {
+            $("#TxtName").blur(function () {
+                $("#TxtNameValidation").empty();
+                if ($(this).val() == "" || $(this).val() == null) {
+                    $("#TxtNameValidation").html("(*) Name required..!!");
+                }
+                else {
+                    if (!$(this).val().match($FullNameRegEx)) {
+                        $("#TxtNameValidation").html("(*) Invalid name..!!");
+                    }
+                }
+            });
+        });
+        
+        
+    </script>
+    <style>
+        small{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="TxtName" autofocus placeholder="enter the name here.." maxlength="40" /><br>
+    <small id="TxtNameValidation"></small>
+    <hr>
+    <input type="text" id="TxtContactNo" placeholder="enter the contact no. here.." maxlength="10" />
+    <small id="TxtContactValidation"></small>
+    <hr>
+    <input type="text" id="TxtEmailId" placeholder="enter the email id here.." maxlength="50" />
+    <small id="TxtEmailIdValidation"></small>
+    <hr>
+    <textarea rows="5" id="TxtContactMsg" placeholder="enter the contact detail here.." maxlength="500"></textarea>
+    <small id="TxtContactMsgValidation"></small>
+    <hr>
+    <button id="BtnSubmit">submit</button>
+
+</body>
+
+</html>
